@@ -22,6 +22,7 @@ The focus is mainly on the Front End using HTML and CSS for the visual grapghics
 
 ### Milestone 2
 ● For each contact, messages are visualized dynamically using the Vue.js v-for directive in the conversation panel.
+
 ● Clicking on the contact the conversation for the clicked contact will be displayed.
 
 ### Milestone 3
@@ -40,14 +41,24 @@ The focus is mainly on the Front End using HTML and CSS for the visual grapghics
 ## Goodies and features for future releases
 
 ● Control for empty messages: it is not possible to send empty messages.
+
 ● Suggestions: instead of writing, user can pick and send quotes and standard messages.
+
 ● Correct time format using the Luxon library.
+
 ● Open a new chat for a new contact.
+
 ● When a new message is received from a contact, the contact automatically scrolls to the top of the contacts.
+
 ● Add emoticons for sending messages from a library.
+
 ● Welcome message: "Welcome, please select who you would like to chat with".
 ● Splash page visible for 1 second.
+
 ● Responsive App for all devices
+
 ● For mobile users display only the contact list, when clicking on the contact the conversation panel and messages are displayed.
+
 ● Icon to enlarge or reduce the font size with an appropriate css class (fonts are rendered relatevely).
+
 ● Icon to switch between light and dark mode
