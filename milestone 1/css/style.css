@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+[v-cloak]{display: none;}
+
 /* typo */
 
 body {
@@ -211,7 +213,7 @@ p{margin-bottom: 0;}
 }
 
 .app-message-input .app-message-input-icon{
-    font-size: 1.375rem;
+    font-size: 1.8rem;
     color: #6b7376;
 }
 
