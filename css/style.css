@@ -1,68 +1,220 @@
-/* Reset */
-* {
+/* reset */
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-
-/* v-cloak for Vue.js rendering, avoid display of {{ }} */
-[v-cloak]{
-    display: none;
 }
 
-/* Typo */
+/* typo */
+
 body {
     font-family: 'Lato', sans-serif;
 }
 
-body{
+/* general */
+
+img{ max-width: 100%;}
+
+ul,ol{
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.row [class^="col"] {padding: 0;}
+
+a{color: currentColor;}
+
+p{margin-bottom: 0;}
+
+/* background */
+
+.background{
+    display: flex;
     height: 100vh;
-    background: rgb(210,219,220);
-    background: linear-gradient(0deg, rgba(210,219,220,1) 0%, rgba(221,219,210,1) 85%, rgba(0,149,135,1) 85%, rgba(0,149,136,1) 100%);
+    background: linear-gradient(
+        to bottom,
+        #009688 0 15%,
+        #D7DBD6 15% 100%
+    );
 }
 
-main {
-    width: 80vw;
-    height: 95vh;
-    display: flex;
-    background-color: white;
+/* app layout */
+.container.app{
+    margin: 1.5rem auto 1.5rem;
 }
 
-/* Aside */
-
-.contacts {
-    width: 30%;
-    background-color: whitesmoke;
-    margin-top: 20px;
+.row{
+    height: 100%;
 }
 
-.contacts header{
-    height: 70px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: lightgrey;
-    padding: 10px;
+/* left column */
+
+.search-form{
+    height: 2.1875rem;
 }
 
-.avatar {
-    width: 7vh;
+.app-chat-card .active-user-img{
+    width: 3.75rem;
+}
+
+.user-name{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.left-column{
+    border-right: .0625rem solid #D6D6D6;
+    height: 100%;
+}
+
+.active-user{
+    height: 75px;
+    background-color: #eaeaea;
+}
+
+.app-notification{
+    height: 75px;
+    background-color: #8edafc;
+    padding: 0 .625rem;
+}
+
+.app-search{
+    height: 50px;
+    background-color: #eaeaea;
+    padding: .625rem;
+}
+
+.app-chat{
+    background-color: #ffffff;
+}
+
+
+.active-user-img{
+    width: 50px;
+    display: block;
+    margin-left: .625rem;
     border-radius: 50%;
 }
 
-.avatar img {
-    width: 100%;
-    border-radius: 50%;
+.active-user-options{
+    color: #6b7376;
+    padding: 0 1.25rem;
 }
 
-/* Message Panel */
+.active-user-options li{   
+    margin: 0 .625rem;
+}
 
-.message-panel {
-    height: 70px;
-    width: 100%;
+
+/* app notification */
+
+.notification-icons-bg{
+    background-color: #ffffff;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    width: 3.125rem;
     display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: darkgrey;
-    padding: 10px;
-    margin-top: 20px;
+}
+
+.notification-icons-bg .notification-icons{
+    font-size: 1.25rem;
+    color: #8edafc;
+}
+
+/* app chat */
+.app-chat .app-chat-card{
+    padding: .875rem 1.375rem .625rem;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.app-chat-card:hover,
+.active{
+    background-color: #eaeaea;
+}
+
+.app-chat-card .active-user-img{
+    margin: 0;
+}
+
+.last-message{
+    font-size: 12px;
+    color: #686868;
+}
+
+/* right column */
+
+.right-column{
+    height: 100%;
+}
+
+.active-user-chat{
+    height: 75px;
+    background-color: #eaeaea;
+}
+
+.app-chat-message{
+    background-image: url(../img/mine.jpg);
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    padding-top: 3.75rem;
+}
+
+.app-message-input{
+    height: 73px;
+    background-color: #eaeaea;
+}
+
+/* app user chat */
+.active-user-chat .message-time{
+    font-size: 0.875rem;
+}
+
+/* app chat message */
+.app-chat-message .message-sent,
+.app-chat-message .message-received{
+    padding: 1.25rem .3125rem .4375rem 1rem;
+    border-radius: 10px;
+}
+
+.app-chat-message .message-sent{
+    background-color: #d5f9ba;
+}
+
+.app-chat-message .message-received{
+    background-color: #ffffff;
+}
+
+.message-time{
+    font-size: 0.75rem;
+    color: #9a9ea0;
+}
+
+.message-sent,
+.message-received{
+    margin-bottom: 0.625rem;
+}
+
+/* app message input */
+.app-message-input{
+    padding: .625rem 2.8125rem .625rem 2.5rem;
+}
+
+.app-message-input .search-form{
+    height: 3.125rem;
+}
+
+.app-message-input .app-message-input-icon{
+    font-size: 1.375rem;
+    color: #6b7376;
+}
+
+.app-message-input .input-bar{
+    margin: 0 2.5rem;
 }
